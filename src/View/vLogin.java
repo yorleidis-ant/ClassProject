@@ -3,18 +3,32 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
+import java.awt.*;
+import javax.swing.*;
+import controller.LoginController;
+
+
 
 /**
  *
  * @author Pynky
  */
 public class vLogin extends javax.swing.JFrame {
+    
+    private LoginController loginController;
+
+    
+    private String rolSeleccionado = "";
+    private Color colorActivo = new Color(102, 204, 255);
+    private Color colorNormal = new JButton().getBackground();
 
     /**
      * Creates new form vLogin
      */
     public vLogin() {
         initComponents();
+        loginController = new LoginController(this);
+        setSize(891,521);
     }
 
     /**
@@ -87,6 +101,11 @@ public class vLogin extends javax.swing.JFrame {
         btn_estudiante.setBackground(new java.awt.Color(140, 242, 90));
         btn_estudiante.setFont(new java.awt.Font("Eras Light ITC", 0, 12)); // NOI18N
         btn_estudiante.setText("Estudiante");
+        btn_estudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_estudianteActionPerformed(evt);
+            }
+        });
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/pngwing.com.png"))); // NOI18N
 
@@ -119,6 +138,11 @@ public class vLogin extends javax.swing.JFrame {
         btn_profesor.setBackground(new java.awt.Color(140, 242, 90));
         btn_profesor.setFont(new java.awt.Font("Eras Light ITC", 0, 12)); // NOI18N
         btn_profesor.setText("Profesor");
+        btn_profesor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_profesorActionPerformed(evt);
+            }
+        });
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/teaher.png"))); // NOI18N
 
@@ -159,6 +183,11 @@ public class vLogin extends javax.swing.JFrame {
         btn_ingresar.setBackground(new java.awt.Color(140, 242, 90));
         btn_ingresar.setFont(new java.awt.Font("Eras Light ITC", 0, 14)); // NOI18N
         btn_ingresar.setText("Ingresar");
+        btn_ingresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ingresarActionPerformed(evt);
+            }
+        });
 
         jLabel10.setFont(new java.awt.Font("Eras Light ITC", 2, 12)); // NOI18N
         jLabel10.setText("Olvidaste tu contraseña?");
@@ -249,6 +278,28 @@ public class vLogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_estudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_estudianteActionPerformed
+        // TODO add your handling code here:
+         rolSeleccionado = "Estudiante";
+        btn_estudiante.setBackground(colorActivo);
+        btn_profesor.setBackground(colorNormal);   
+    }//GEN-LAST:event_btn_estudianteActionPerformed
+
+    private void btn_profesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_profesorActionPerformed
+        // TODO add your handling code here:
+         rolSeleccionado = "Profesor";
+        btn_profesor.setBackground(colorActivo);
+        btn_estudiante.setBackground(colorNormal);
+    }//GEN-LAST:event_btn_profesorActionPerformed
+
+    private void btn_ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ingresarActionPerformed
+        // TODO add your handling code here:
+        String correo = tx_email.getText().trim();
+        String contrasena = new String(jps_pass.getPassword());
+        loginController.procesarLogin(correo, contrasena, rolSeleccionado);
+
+    }//GEN-LAST:event_btn_ingresarActionPerformed
 
     /**
      * @param args the command line arguments
