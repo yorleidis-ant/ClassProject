@@ -9,7 +9,8 @@ package Model;
  * @author Pynky
  */
 public class Persona {
-    private String  primerNombre;
+
+    private String primerNombre;
     private String segundoNombre;
     private String primerApellido;
     private String segundoApellido;
@@ -112,5 +113,5 @@ public class Persona {
     public void setCumpleaños(String cumpleaños) {
         this.cumpleaños = cumpleaños;
     }
-    
+
 }

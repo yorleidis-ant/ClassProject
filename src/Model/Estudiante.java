@@ -4,46 +4,53 @@
  */
 package Model;
 
-/**
- *
- * @author Pynky
- */
-public class Estudiante extends Persona{
-    
-    private String codigoEstudiante;
-    private String grado;
-    private String estado;
+public class Estudiante extends Persona {
 
-    public Estudiante(String codigoEstudiante, String grado, String estado, String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, String tipoIdentificacion, String numeroIdentificacion, String edad, String sexo, String peso, String cumpleaños) {
-        super(primerNombre, segundoNombre, primerApellido, segundoApellido, tipoIdentificacion, numeroIdentificacion, edad, sexo, peso, cumpleaños);
-        this.codigoEstudiante = codigoEstudiante;
-        this.grado = grado;
-        this.estado = estado;
+    private String lugarNacimiento;
+    private String acudiente;
+    private String telefonoAcudiente;
+
+    public Estudiante(
+            String primerNombre,
+            String segundoNombre,
+            String primerApellido,
+            String segundoApellido,
+            String fechaNacimiento,
+            String lugarNacimiento,
+            String acudiente,
+            String telefonoAcudiente
+    ) {
+        // Llenamos los campos de Persona con campos vacíos donde no usamos
+        super(primerNombre, segundoNombre, primerApellido, segundoApellido,
+                "", "", "", "", "", fechaNacimiento);
+
+        this.lugarNacimiento = lugarNacimiento;
+        this.acudiente = acudiente;
+        this.telefonoAcudiente = telefonoAcudiente;
     }
 
-    public String getCodigoEstudiante() {
-        return codigoEstudiante;
+    public String getLugarNacimiento() {
+        return lugarNacimiento;
     }
 
-    public void setCodigoEstudiante(String codigoEstudiante) {
-        this.codigoEstudiante = codigoEstudiante;
+    public void setLugarNacimiento(String lugarNacimiento) {
+        this.lugarNacimiento = lugarNacimiento;
     }
 
-    public String getGrado() {
-        return grado;
+    public String getAcudiente() {
+        return acudiente;
     }
 
-    public void setGrado(String grado) {
-        this.grado = grado;
+    public void setAcudiente(String acudiente) {
+        this.acudiente = acudiente;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getTelefonoAcudiente() {
+        return telefonoAcudiente;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setTelefonoAcudiente(String telefonoAcudiente) {
+        this.telefonoAcudiente = telefonoAcudiente;
     }
-    
+
 }
-

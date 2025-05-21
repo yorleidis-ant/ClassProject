@@ -4,56 +4,52 @@
  */
 package Model;
 
-/**
- *
- * @author Pynky
- */
 public class Profesor extends Persona {
-     
-    private String profesion;
-    private String materia;
-    private String HorarioClases;
-    private String correoInstitucional;
 
-    public Profesor(String profesion, String materia, String HorarioClases, String correoInstitucional, String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, String tipoIdentificacion, String numeroIdentificacion, String edad, String sexo, String peso, String cumpleaños) {
-        super(primerNombre, segundoNombre, primerApellido, segundoApellido, tipoIdentificacion, numeroIdentificacion, edad, sexo, peso, cumpleaños);
-        this.profesion = profesion;
-        this.materia = materia;
-        this.HorarioClases = HorarioClases;
-        this.correoInstitucional = correoInstitucional;
+    private String lugarNacimiento;
+    private String correoElectronico;
+    private String telefono;
+
+    public Profesor(
+            String primerNombre,
+            String segundoNombre,
+            String primerApellido,
+            String segundoApellido,
+            String fechaNacimiento,
+            String lugarNacimiento,
+            String correoElectronico,
+            String telefono
+    ) {
+        super(primerNombre, segundoNombre, primerApellido, segundoApellido,
+                "", "", "", "", "", fechaNacimiento);
+
+        this.lugarNacimiento = lugarNacimiento;
+        this.correoElectronico = correoElectronico;
+        this.telefono = telefono;
     }
 
-    public String getProfesion() {
-        return profesion;
+    // Getters y setters si los necesitas
+    public String getLugarNacimiento() {
+        return lugarNacimiento;
     }
 
-    public void setProfesion(String profesion) {
-        this.profesion = profesion;
+    public void setLugarNacimiento(String lugarNacimiento) {
+        this.lugarNacimiento = lugarNacimiento;
     }
 
-    public String getMateria() {
-        return materia;
+    public String getCorreoElectronico() {
+        return correoElectronico;
     }
 
-    public void setMateria(String materia) {
-        this.materia = materia;
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
     }
 
-    public String getHorarioClases() {
-        return HorarioClases;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public void setHorarioClases(String HorarioClases) {
-        this.HorarioClases = HorarioClases;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
-
-    public String getCorreoInstitucional() {
-        return correoInstitucional;
-    }
-
-    public void setCorreoInstitucional(String correoInstitucional) {
-        this.correoInstitucional = correoInstitucional;
-    }
-    
 }
-

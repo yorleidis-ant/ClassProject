@@ -3,21 +3,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
+
 import java.awt.*;
 import javax.swing.*;
 import controller.LoginController;
-
-
 
 /**
  *
  * @author Pynky
  */
 public class vLogin extends javax.swing.JFrame {
-    
+
     private LoginController loginController;
 
-    
     private String rolSeleccionado = "";
     private Color colorActivo = new Color(102, 204, 255);
     private Color colorNormal = new JButton().getBackground();
@@ -28,7 +26,7 @@ public class vLogin extends javax.swing.JFrame {
     public vLogin() {
         initComponents();
         loginController = new LoginController(this);
-        setSize(891,521);
+        setSize(891, 521);
     }
 
     /**
@@ -61,8 +59,9 @@ public class vLogin extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jps_pass = new javax.swing.JPasswordField();
         btn_ingresar = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        btn_admin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -116,17 +115,17 @@ public class vLogin extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(btn_estudiante))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addComponent(jLabel4)))
-                .addContainerGap(25, Short.MAX_VALUE))
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(btn_estudiante)))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn_estudiante)
@@ -151,19 +150,18 @@ public class vLogin extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(jLabel5))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(btn_profesor)))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE)
+                .addComponent(btn_profesor)
+                .addGap(14, 14, 14))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn_profesor)
@@ -181,7 +179,7 @@ public class vLogin extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/llave4.png"))); // NOI18N
 
         btn_ingresar.setBackground(new java.awt.Color(140, 242, 90));
-        btn_ingresar.setFont(new java.awt.Font("Eras Light ITC", 0, 14)); // NOI18N
+        btn_ingresar.setFont(new java.awt.Font("Eras Light ITC", 0, 18)); // NOI18N
         btn_ingresar.setText("Ingresar");
         btn_ingresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,10 +187,41 @@ public class vLogin extends javax.swing.JFrame {
             }
         });
 
-        jLabel10.setFont(new java.awt.Font("Eras Light ITC", 2, 12)); // NOI18N
-        jLabel10.setText("Olvidaste tu contraseña?");
+        jPanel5.setBackground(new java.awt.Color(140, 242, 90));
 
-        jSeparator2.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/admin.png"))); // NOI18N
+
+        btn_admin.setBackground(new java.awt.Color(140, 242, 90));
+        btn_admin.setFont(new java.awt.Font("Eras Light ITC", 0, 12)); // NOI18N
+        btn_admin.setText("Administrador");
+        btn_admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_adminActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_admin)
+                .addContainerGap())
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jLabel13)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_admin)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -201,40 +230,36 @@ public class vLogin extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(47, 47, 47)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jLabel8))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel6)
-                                    .addComponent(tx_email)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jps_pass, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)))))
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(58, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(btn_ingresar, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(171, 171, 171))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addGap(156, 156, 156))))
+                        .addGap(47, 47, 47)
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel6)
+                            .addComponent(tx_email)
+                            .addComponent(jLabel7)
+                            .addComponent(jps_pass, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(168, 168, 168)
+                        .addComponent(btn_ingresar, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,28 +271,25 @@ public class vLogin extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addComponent(jLabel3)
                 .addGap(26, 26, 26)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tx_email, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addComponent(jps_pass, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addComponent(btn_ingresar)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addComponent(jLabel7)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jps_pass, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addGap(18, 18, 18)
+                .addComponent(btn_ingresar)
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2);
@@ -279,27 +301,42 @@ public class vLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_estudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_estudianteActionPerformed
+    private void btn_adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_adminActionPerformed
         // TODO add your handling code here:
-         rolSeleccionado = "Estudiante";
-        btn_estudiante.setBackground(colorActivo);
-        btn_profesor.setBackground(colorNormal);   
-    }//GEN-LAST:event_btn_estudianteActionPerformed
-
-    private void btn_profesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_profesorActionPerformed
-        // TODO add your handling code here:
-         rolSeleccionado = "Profesor";
-        btn_profesor.setBackground(colorActivo);
-        btn_estudiante.setBackground(colorNormal);
-    }//GEN-LAST:event_btn_profesorActionPerformed
+        if (!"Administrador".equals(rolSeleccionado)) {
+            rolSeleccionado = "Administrador";
+            btn_admin.setBackground(colorActivo);
+            btn_estudiante.setBackground(colorNormal);
+            btn_profesor.setBackground(colorNormal);
+        }
+    }//GEN-LAST:event_btn_adminActionPerformed
 
     private void btn_ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ingresarActionPerformed
         // TODO add your handling code here:
         String correo = tx_email.getText().trim();
         String contrasena = new String(jps_pass.getPassword());
         loginController.procesarLogin(correo, contrasena, rolSeleccionado);
-
     }//GEN-LAST:event_btn_ingresarActionPerformed
+
+    private void btn_profesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_profesorActionPerformed
+        // TODO add your handling code here:
+        if (!"Profesor".equals(rolSeleccionado)) {
+            rolSeleccionado = "Profesor";
+            btn_profesor.setBackground(colorActivo);
+            btn_admin.setBackground(colorNormal);
+            btn_estudiante.setBackground(colorNormal);
+        }
+    }//GEN-LAST:event_btn_profesorActionPerformed
+
+    private void btn_estudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_estudianteActionPerformed
+        // TODO add your handling code here:
+        if (!"Estudiante".equals(rolSeleccionado)) {
+            rolSeleccionado = "Estudiante";
+            btn_estudiante.setBackground(colorActivo);
+            btn_admin.setBackground(colorNormal);
+            btn_profesor.setBackground(colorNormal);
+        }
+    }//GEN-LAST:event_btn_estudianteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -337,13 +374,14 @@ public class vLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_admin;
     private javax.swing.JButton btn_estudiante;
     private javax.swing.JButton btn_ingresar;
     private javax.swing.JButton btn_profesor;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -356,8 +394,8 @@ public class vLogin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPasswordField jps_pass;
     private javax.swing.JTextField tx_email;
     // End of variables declaration//GEN-END:variables

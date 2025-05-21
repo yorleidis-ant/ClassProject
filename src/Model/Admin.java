@@ -9,7 +9,7 @@ package Model;
  * @author Pynky
  */
 public class Admin extends Persona {
-    
+
     private String cargo;
     private String areaEncargada;
     private String CorreoInstitucional;
@@ -54,7 +54,5 @@ public class Admin extends Persona {
     public void setTelefonoContacto(String telefonoContacto) {
         this.telefonoContacto = telefonoContacto;
     }
-    
-    
-}
 
+}

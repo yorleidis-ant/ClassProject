@@ -9,6 +9,7 @@ package Model;
  * @author Pynky
  */
 public class usuario {
+
     //atributos
     private String email;
     private String password;
@@ -20,7 +21,7 @@ public class usuario {
         this.password = password;
         this.rol = rol;
     }
-    
+
     //getters y setters 
     public String getEmail() {
         return email;
@@ -45,8 +46,5 @@ public class usuario {
     public void setRol(String rol) {
         this.rol = rol;
     }
-    
-    
-    
-    
+
 }
